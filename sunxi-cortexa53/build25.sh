@@ -108,7 +108,7 @@ fi
 
 
 # 强制将 UI 传入的固件大小写入配置文件，覆盖底层默认的 300M 限制
-echo "CONFIG_TARGET_ROOTFS_PARTSIZE=$ROOTFS_PARTSIZE" >> /home/build/immortalwrt/.config
+echo "CONFIG_TARGET_ROOTFS_PARTSIZE=1024" >> /home/build/immortalwrt/.config
 
 make image PROFILE=$PROFILE PACKAGES="$PACKAGES" FILES="/home/build/immortalwrt/files"
 if [ $? -ne 0 ]; then
